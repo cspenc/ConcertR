@@ -17,6 +17,13 @@
   <body>
     <div class="navbar">
       <a href="/">Home</a>
+
+      <% if logged_in? %>
+        <%= current_user.username %>
+        <a href="/logout">Logout</a>
+      <% else %>
+        You ain't logged in
+      <% end %>
     </div>
     <div class="container">
       <%= yield %>

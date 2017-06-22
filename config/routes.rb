@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   root 'sessions#home'
   get '/login', to: 'sessions#new'
+  get '/logout', to: 'sessions#destroy'
 end
